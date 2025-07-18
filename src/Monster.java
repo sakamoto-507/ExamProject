@@ -1,0 +1,46 @@
+public class Monster implements Creature {
+    private String name;
+    private int hp;
+    char suffix;
+
+    public Monster(int hp, char suffix, String name) {
+        this.name = name;
+        this.hp = hp;
+        this.suffix = suffix;
+        if (hp < 0) {
+            throw new IllegalArgumentException("初期設定に誤りがあるため、キャラクターを作成できませんでした");
+        }
+    }
+
+    final public boolean isAlive() {
+        if (this.hp > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public char getsuffix(){
+        return suffix;
+    }
+    public void showStatus() {
+        System.out.println(this.name + this.suffix +  ":HP " + this.hp);
+    }
+    public void attack(Creature target){}
+    public void setHp(int hp){
+        if (hp < 0) {
+            throw new IllegalArgumentException("負の値はsetHpできないよエラー");
+        }else{
+            this.hp = hp;
+        }
+    }
+    public int getHp(){
+        return hp;
+    }
+    public void setName(String name){
+        this.name = name;
+    }
+    public String getName(){
+        return name;
+    }
+}
