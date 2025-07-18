@@ -1,4 +1,4 @@
-public class Goblin extends Monster {
+final public class Goblin extends Monster {
     public Goblin(int hp, char suffix) {
         super(hp, suffix,"ゴブリン");
     }

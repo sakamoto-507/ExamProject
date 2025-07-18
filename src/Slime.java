@@ -1,4 +1,4 @@
-public class Slime extends Monster{
+final public class Slime extends Monster{
     public Slime(int hp, char suffix) {
         super(hp, suffix,"スライム");
     }

@@ -1,4 +1,4 @@
-public class Monster implements Creature {
+public abstract class Monster implements Creature {
     private String name;
     private int hp;
     char suffix;
@@ -26,7 +26,7 @@ public class Monster implements Creature {
     public void showStatus() {
         System.out.println(this.name + this.suffix +  ":HP " + this.hp);
     }
-    public void attack(Creature target){}
+    public void attack(Monster target){}
     public void setHp(int hp){
         if (hp < 0) {
             throw new IllegalArgumentException("負の値はsetHpできないよエラー");
