@@ -37,5 +37,5 @@ public abstract class Character implements Creature {
     public String getName(){
         return name;
     }
-    public abstract void attack(Creature target);
+    public void attack(Character target){}
 }

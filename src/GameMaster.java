@@ -39,7 +39,7 @@ public class GameMaster {
         for (int i = 0; i <= party.size() - 1; i++) {
             party.get(i).showStatus();
             System.out.print("生存状況:");
-            if (party.get(i).isAlive() ==true) {
+            if (party.get(i).isAlive() == true) {
                 System.out.println("生存");
             }else{
                 System.out.println("死亡");
@@ -49,7 +49,7 @@ public class GameMaster {
         for (int i = 0; i <= monsters.size() - 1; i++) {
             monsters.get(i).showStatus();
             System.out.print("生存状況:");
-            if (monsters.get(i).isAlive() ==true) {
+            if (monsters.get(i).isAlive() == true) {
                 System.out.println("生存");
             }else{
                 System.out.println("死亡");
