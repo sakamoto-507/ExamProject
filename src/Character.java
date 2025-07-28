@@ -3,11 +3,11 @@ public abstract class Character implements Creature {
     private int hp;
 
     public Character(String n, int hp) {
-        this.name = n;
-        this.hp = hp;
         if (hp < 0) {
             throw new IllegalArgumentException("初期設定に誤りがあるため、キャラクターを作成できませんでした");
         }
+        setName(n);
+        setHp(hp);
     }
 
     final public boolean isAlive() {
